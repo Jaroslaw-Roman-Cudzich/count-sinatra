@@ -6,9 +6,16 @@
     <title>Count</title>
   </head>
   <body>
+    <form action="/reset" method="post">
+      <input type="submit" value="Reset">
+    </form>
     <form action="/increment" method="post">
       <input type="submit" value="Increment">
     </form>
+    <form action="/decrement" method="post">
+      <input type="submit" value="Decrement">
+      <p>The time is now <%= Time.now.strftime("%H:%M:%S")%></time>.</p>
+     </form>
     <div id="count"><%= @counter.count %></div>
   </body>
 </html>
